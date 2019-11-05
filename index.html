@@ -12,49 +12,68 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Take or Create a Survey</h1>
+      <h1>Survey</h1>
 
+<div class="auth-hide">
+      <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle btn-block" type="button"
+      id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      My Account </button>
 
-<div class="auth-show">  <h2>Sign-up</h2>
-<form id="sign-up">
-<input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
-<input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
-<input type="password" class="input-box" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
-<br />
-<button class="signUpButton">Sign up</button>
-</form>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button id="change-password" class="dropdown-item submit" type="button"
+      data-toggle="modal" data-target="#passwordModalCenter">Change Password</button>
+      <button type="button" class="dropdown-item" id="sign-out-button">Sign Out</button>
+      </div>
+      </div>
 </div>
 
 
-<div class="auth-show"> <h2>Sign-in</h2>
-<form id='sign-in'>
-<input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
-<input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
-<br />
-<button>Sign in</button>
-</form>
-</div>
+      <div class="auth-show">  <h2>Sign-up</h2>
+          <form id="sign-up">
+          <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+          <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+          <input type="password" class="input-box" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
+         <br />
+          <button class="signUpButton">Sign up</button>
+          </form>
+          </div>
 
+          <div class="auth-show"> <h2>Sign-in</h2>
+          <form id='sign-in'>
+          <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+          <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+          <br />
+          <button>Sign in</button>
+          </form>
+          </div>
 
-<div class="dropdown">
-<button class="btn btn-light dropdown-toggle btn-block" type="button"
-id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-My Account </button>
-
-<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-<button id="change-password" class="dropdown-item submit" type="button"
-data-toggle="modal" data-target="#passwordModalCenter">Change Password</button>
-<button type="button" class="dropdown-item" id="sign-out-button">Sign Out</button>
-</div>
-</div>
-
+<div class="auth-hide">
 <button type="button" class="btn-light btn sidebar-buttons btn-block" id="create-survey-button">Create a Survey</button>
+</div>
 
+<div class="auth-hide">
 <button id="take-surveys-button" type="button" class="btn btn-light sidebar-buttons btn-block">Take a Survey</button>
+</div>
 
+<div class="auth-hide">
+<div id="create-survey" class='col-6 mt-5'>
+        <form id="create-survey-form">
+          <h2>Create My Survey</h2>
+          <h5 id="create-survey-message"></h5>
+          <p>
+          <input type="text" name="survey[title]" placeholder="Put Your Question" class="form-control">
 
+          <input type="text" name="survey[option1]"class="form-control mt-2" placeholder="Option #1" required>
+          <input type="text" name="survey[option2]" class="form-control mt-2" placeholder="Option #2" required>
+          <input type="text" name="survey[option3]" class="form-control mt-2" placeholder="Option #3" required>
+          <input type="text" name="survey[option4]" class="form-control mt-2" placeholder="Option #4" required>
 
-
+          </p>
+          <button type="submit" id="create-new-survey-button" class="btn btn-info submit">Create</button>
+        </form>
+      </div>
+</div>
 
     </body>
 </html>
