@@ -1,0 +1,30 @@
+
+
+{{#each surveys as |survey|}}
+
+
+<tr>
+  <td>{{survey.title}}</td>
+</tr>
+
+<tr>
+  <td>{{survey.owner}}</td>
+</tr>
+
+<tr data-title="{{survey.choices.option1.title}}">
+  <td>{{survey.choices.option1}}</td>
+</tr>
+
+tr data-title="{{survey.choices.option2.title}}">
+  <td>{{survey.choices.option2}}</td>
+</tr>
+
+tr data-title="{{survey.choices.option3.title}}">
+  <td>{{survey.choices.option3}}</td>
+</tr>
+
+tr data-title="{{survey.choices.option4.title}}">
+  <td>{{survey.choices.option4}}</td>
+</tr>
+
+{{/each}}
