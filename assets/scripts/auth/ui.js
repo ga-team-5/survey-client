@@ -8,21 +8,21 @@ const surveyIndexTemplate = require('../templates/survey.handlebars')
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert')
   console.log('signUpSuccess ran. Data is :', data)
 }
 
 const signUpFailure = function (error) {
   $('#message').text('Error on sign up')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert')
   console.error('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert')
   $('.sign-up').hide()
   $('.sign-in').hide()
   $('.navbar').removeClass('d-none')
@@ -36,14 +36,14 @@ const signInSuccess = function (data) {
 const signInFailure = function (error) {
   $('#message').text('Error on sign in')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert')
   console.error('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert')
   $('form').trigger('reset')
   $('.sign-up').show()
   $('.sign-in').show()
@@ -57,21 +57,21 @@ const signOutSuccess = function () {
 const signOutFailure = function (error) {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert')
   console.error('signOutFailure ran. Error is :', error)
 }
 
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert')
   console.log('changePasswordSuccess ran and nothing was returned!')
 }
 
 const changePasswordFailure = function (error) {
   $('#message').text('Error on change password')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert')
   console.error('changePasswordFailure ran. Error is :', error)
 }
 
