@@ -14,7 +14,7 @@
     <body>
       <h1>Survey</h1>
 
-<div class="my-account">
+<div class="my-account d-none">
       <div class="dropdown">
       <button class="btn btn-light dropdown-toggle btn-block" type="button"
       id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,35 +28,31 @@
       </div>
 </div>
 
-
-      <div class="sign-up">  <h2>Sign-up</h2>
+<div class="login-div container-fluid">
+  <div class="row d-flex">
+      <div class="sign-up col-6">  <h2>Sign-up</h2>
           <form id="sign-up">
-          <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
-          <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
-          <input type="password" class="input-box" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
+          <input type="email" class="input-box col-6" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+          <input type="password" class="input-box col-6" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+          <input type="password" class="input-box col-6" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
          <br />
           <button class="signUpButton">Sign up</button>
           </form>
       </div>
 
-      <div class="sign-in"> <h2>Sign-in</h2>
+      <div class="sign-in col-6"> <h2>Sign-in</h2>
           <form id='sign-in'>
-          <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
-          <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+          <input type="email" class="input-box col-6" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+          <input type="password" class="input-box col-6" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
           <br />
           <button>Sign in</button>
           </form>
       </div>
+      </div>
+    </div>
 
-<!-- <div class="create-survey-button">
-<button type="button" class="btn-light btn sidebar-buttons btn-block" id="create-survey-button">Create a Survey</button>
-</div> -->
 
-<div class="take-survey">
-<button id="take-surveys-button" type="button" class="btn btn-light sidebar-buttons btn-block">Take a Survey</button>
-</div>
-
-<div class="auth-hide">
+<div class="create-survey d-none">
 
       <div id="create-survey" class='col-6 mt-5'>
         <form id="create-survey-form">

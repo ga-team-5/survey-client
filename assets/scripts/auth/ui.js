@@ -23,8 +23,10 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('.auth-show').hide()
-  $('.auth-hide').show()
+  $('.sign-up').hide()
+  $('.sign-in').hide()
+  $('.my-account').removeClass('d-none')
+
   const surveyHTML = surveyIndexTemplate({surveys: data.surveys})
   $('#all-surveys-container').html(surveyHTML)
   console.log('signInSuccess ran. Data is :', data)
@@ -42,6 +44,9 @@ const signOutSuccess = function () {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
+  $('.sign-up').show()
+  $('.sign-in').show()
+  $('.my-account').hide()
   console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
 }
