@@ -67,11 +67,28 @@ const getSurveyStats = function (target) {
   })
 }
 
+const voteCreate = (optionId, surveyId) => {
+  return $.ajax({
+    url: config.apiUrl + '/votes',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: {
+      vote: {
+        survey_id: surveyId,
+        optionId: optionId
+      }
+    }
+  })
+}
+
 module.exports = {
   surveyIndex,
   createSurvey,
   updateSurvey,
   takeSurveys,
   deleteSurvey,
-  getSurveyStats
+  getSurveyStats,
+  voteCreate
 }

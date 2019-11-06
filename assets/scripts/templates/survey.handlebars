@@ -3,24 +3,26 @@
 
 
 <div class="col-5 mx-auto survey-div">
-  <h4>{{survey.title}}</h4>
-  <div>
-    <p>{{survey.choices.option1}}</p>
-    <input type="radio" name="vote" value="1">
-  </div>
-  <div>
-    <p>{{survey.choices.option2}}</p>
-    <input type="radio" name="vote" value="2">
-  </div>
-  <div>
-    <p>{{survey.choices.option3}}</p>
-    <input type="radio" name="vote" value="3">
-  </div>
-  <div>
-    <p>{{survey.choices.option4}}</p>
-    <input type="radio" name="vote" value="4">
-  </div>
-  <button type="submit" class="btn btn-info vote-submit" data-survey-id={{survey._id}}>Submit</button>
+  <form class="survey-form" data-survey-id={{survey._id}}>
+    <h4>{{survey.title}}</h4>
+    <div>
+      <p>{{survey.choices.option1}}</p>
+      <input type="radio" name="vote" value="1">
+    </div>
+    <div>
+      <p>{{survey.choices.option2}}</p>
+      <input type="radio" name="vote" value="2">
+    </div>
+    <div>
+      <p>{{survey.choices.option3}}</p>
+      <input type="radio" name="vote" value="3">
+    </div>
+    <div>
+      <p>{{survey.choices.option4}}</p>
+      <input type="radio" name="vote" value="4">
+    </div>
+    <button type="submit" class="btn btn-info vote-submit">Submit</button>
+  </form>
 </div>
 
 {{/each}}
