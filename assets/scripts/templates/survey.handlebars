@@ -1,7 +1,32 @@
 
-
 {{#each surveys as |survey|}}
+<div class="col-5 mx-auto">
+  <h4>{{survey.title}}</h4>
+  <div>
+    <p>{{survey.option1}}</p>
+    <input type="radio" name="vote" value="1">
+  </div>
+  <div>
+    <p>{{survey.option2}}</p>
+    <input type="radio" name="vote" value="2">
+  </div>
+  <div>
+    <p>{{survey.option3}}</p>
+    <input type="radio" name="vote" value="3">
+  </div>
+  <div>
+    <p>{{survey.option4}}</p>
+    <input type="radio" name="vote" value="4">
+  </div>
+  <button type="submit" class="btn btn-info vote-submit" data-survey-id={{survey._id}}>Submit</button>
+</div>
+{{/each}}
 
+
+
+
+{{!-- <div>
+<table>
 <tr data-id="{{survey.id}}">
   <td>{{survey.id}}</td>
 </tr>
@@ -29,5 +54,5 @@ tr data-title="{{survey.choices.option3.title}}">
 tr data-title="{{survey.choices.option4.title}}">
   <td>{{survey.choices.option4}}</td>
 </tr>
-
-{{/each}}
+</table>
+</div> --}}

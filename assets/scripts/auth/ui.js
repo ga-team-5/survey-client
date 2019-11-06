@@ -3,6 +3,7 @@
 'use strict'
 
 const store = require('../store')
+const surveyIndexTemplate = require('../templates/survey.handlebars')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
@@ -22,8 +23,11 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('.auth-show').hide()
+  $('.auth-hide').show()
+  const surveyHTML = surveyIndexTemplate({surveys: data.surveys})
+  $('#all-surveys-container').html(surveyHTML)
   console.log('signInSuccess ran. Data is :', data)
-  store.user = data.user
 }
 
 const signInFailure = function (error) {
