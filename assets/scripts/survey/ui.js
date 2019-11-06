@@ -2,11 +2,11 @@
 
 const onVoteSuccess = (response) => {
   $('#message').addClass('alert')
-  console.log()
+  console.log(response)
 }
 
-const onVoteFailure = () => {
-
+const onVoteFailure = (response) => {
+  console.log(response)
 }
 
 module.exports = {
