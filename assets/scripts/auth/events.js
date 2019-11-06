@@ -4,7 +4,9 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
 
 const api = require('./api')
+const surveyApi = require('../survey/api.js')
 const ui = require('./ui')
+const store = require('../store.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -22,6 +24,10 @@ const onSignIn = function (event) {
 
   const data = getFormFields(this)
   api.signIn(data)
+    .then(creds => {
+      store.user = data.user
+      return surveyApi.surveyIndex
+    })
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
