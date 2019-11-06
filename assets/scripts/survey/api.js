@@ -24,17 +24,6 @@ const createSurvey = function (formData) {
   })
 }
 
-const getSurveys = function (formData) {
-  return $.ajax({
-    url: config.apiUrl + '/surveys',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: formData
-  })
-}
-
 const updateSurvey = function (formData, target) {
   return $.ajax({
     url: config.apiUrl + '/surveys/' + target,
@@ -81,7 +70,6 @@ const getSurveyStats = function (target) {
 module.exports = {
   surveyIndex,
   createSurvey,
-  getSurveys,
   updateSurvey,
   takeSurveys,
   deleteSurvey,
