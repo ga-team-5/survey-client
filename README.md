@@ -45,6 +45,6 @@ Every feature we created had its own branch.  After every feature was created, t
 
 ## Wire Frames
 
-![](<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>)
+<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>
 
 ![](<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>)
