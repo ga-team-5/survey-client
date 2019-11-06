@@ -12,5 +12,5 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out-btn').on('click', authEvents.onSignOut)
-  $('#all-surveys-container form').on('submit', surveyEvents.onSurveySubmit)
+  $('.all-surveys-container').on('submit', 'form', surveyEvents.onSurveySubmit)
 })

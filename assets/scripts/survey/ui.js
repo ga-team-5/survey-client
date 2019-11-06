@@ -1,11 +1,11 @@
 // const showServeysTemplate = require('../templates/servey.handlebars')
 
 const onVoteSuccess = (response) => {
-  console.log()
+  console.log(response)
 }
 
-const onVoteFailure = () => {
-
+const onVoteFailure = (response) => {
+  console.log(response)
 }
 
 module.exports = {

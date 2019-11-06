@@ -77,7 +77,7 @@ const voteCreate = (optionId, surveyId) => {
     data: {
       vote: {
         survey_id: surveyId,
-        optionId: optionId
+        option_id: optionId
       }
     }
   })
