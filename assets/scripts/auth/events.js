@@ -12,7 +12,7 @@ const onSignUp = function (event) {
   event.preventDefault()
   console.log('sign up ran!')
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -22,11 +22,12 @@ const onSignIn = function (event) {
   event.preventDefault()
   console.log('sign in ran!')
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.signIn(data)
     .then(creds => {
-      store.user = data.user
-      return surveyApi.surveyIndex
+      store.user = creds.user
+      console.log(store.user)
+      return surveyApi.surveyIndex()
     })
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -45,7 +46,7 @@ const onChangePassword = function (event) {
   event.preventDefault()
   console.log('change password ran!')
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
