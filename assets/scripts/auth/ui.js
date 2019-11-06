@@ -28,6 +28,7 @@ const signInSuccess = function (data) {
   $('.navbar').removeClass('d-none')
 
   const surveyHTML = surveyIndexTemplate({surveys: data.surveys})
+  $('#all-surveys-container').removeClass('d-none')
   $('#all-surveys-container').html(surveyHTML)
   console.log('signInSuccess ran. Data is :', data)
 }
@@ -46,6 +47,7 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
   $('.sign-up').show()
   $('.sign-in').show()
+  $('#all-surveys-container').addClass('d-none')
   $('#all-surveys-container').html('')
   $('.navbar').addClass('d-none')
   console.log('signOutSuccess ran and nothing was returned!')
