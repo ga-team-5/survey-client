@@ -6,12 +6,19 @@ JavaScript, MongoDB, Handlebars, jQuery, Express, HTML, CSS, Bootstrap, Postman,
 
 ## User Stories:
 As a new user, I can sign up with an email and password
+
 As a User signed up, I can sign in with my credentials
+
 As a User signed in, I have the ability to change my password
+
 As a User signed in, I can create a new survey
+
 As a User signed in, I can update my surveys
+
 As a User signed in, I can delete my surveys
+
 As a User signed in, I can view all surveys created by other users and me
+
 As a User signed in, I can participate in a all surveys by other users and me
 
 ## Links
@@ -38,6 +45,6 @@ Every feature we created had its own branch.  After every feature was created, t
 
 ## Wire Frames
 
-![Sign-In](<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>)
+![](<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>)
 
-![Survey](<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>)
+![](<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>)
