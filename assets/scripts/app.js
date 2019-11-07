@@ -15,4 +15,5 @@ $(() => {
   $('.all-surveys-container').on('submit', 'form', surveyEvents.onSurveySubmit)
   $('.all-surveys-container').on('click', '.results-btn-div button', surveyEvents.onCalcResults)
   $('#createModalForm').on('submit', surveyEvents.onCreateSurvey)
+  $('.my-survey').on('click', surveyEvents.onMySurveySubmit)
 })
