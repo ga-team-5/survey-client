@@ -55,6 +55,11 @@ const onSurveyCreateSuccess = (response) => {
   console.log(response)
   $('#createModalForm').trigger('reset')
   $('#createModal').modal('toggle')
+  $('.my-survey').trigger('click')
+  $('#message').text('Survey created!')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 7000)
+  $('#message').addClass('alert')
 }
 
 const onSurveyCreateFailure = (response) => {
@@ -62,9 +67,9 @@ const onSurveyCreateFailure = (response) => {
 }
 
 const onMySurveySuccess = (response) => {
-  $('#message').text('Here we go!')
+  $('#message').text('My surveys!')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 7000)
   $('#message').addClass('alert')
   const mySurveyHTML = mySurveysTemplate({surveys: response.surveys})
   $('#all-surveys-container').addClass('d-none')
@@ -98,6 +103,7 @@ const onMySurveyEditSuccess = (response) => {
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
+  $('.my-survey').trigger('click')
   console.log(response)
 }
 
@@ -112,6 +118,8 @@ const onMySurveyDeleteSuccess = (response) => {
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
+  console.log("hello")
+  $('.my-survey').trigger('click')
   console.log(response)
 }
 

@@ -30,14 +30,17 @@ const onMySurveySubmit = (event) => {
 
 const onMySurveyEdit = (event) => {
   event.preventDefault()
-  surveyApi.mySurveyIndex()
+  const data = getFormFields(event.target)
+  const surveyId = $(event.target).data('survey-id')
+  surveyApi.mySurveyEdit(surveyId, data)
     .then(surveyUi.onMySurveyEditSuccess)
     .catch(surveyUi.onMySurveyEditFailure)
 }
 
 const onMySurveyDelete = (event) => {
   event.preventDefault()
-  surveyApi.mySurveyIndex()
+  const surveyId = $(event.target).data('survey-id')
+  surveyApi.mySurveyDelete(surveyId)
     .then(surveyUi.onMySurveyDeleteSuccess)
     .catch(surveyUi.onMySurveyDeleteyFailure)
 }

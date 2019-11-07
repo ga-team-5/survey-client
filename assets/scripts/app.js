@@ -17,7 +17,8 @@ $(() => {
   $('.all-surveys-container').on('click', '.results-btn-div button', surveyEvents.onCalcResults)
   $('#createModalForm').on('submit', surveyEvents.onCreateSurvey)
   $('.my-survey').on('click', surveyEvents.onMySurveySubmit)
-  $('.edit-survey-button').on('click', surveyEvents.onMySurveyEdit)
-  $('.delete-survey-button').on('click', surveyEvents.onMySurveyDelete)
+  $('.my-surveys-container').on('submit', 'form', surveyEvents.onMySurveyEdit)
+
+  $('.my-surveys-container').on('click', '.delete-btn-div button', surveyEvents.onMySurveyDelete)
   $('.all-surveys').on('click', surveyEvents.onAllSurveys)
 })
