@@ -1,4 +1,5 @@
-// const showServeysTemplate = require('../templates/servey.handlebars')
+const mySurveysTemplate = require('../templates/mySurvey.handlebars')
+const surveyIndexTemplate = require('../templates/survey.handlebars')
 
 const onVoteSuccess = (response) => {
   $('#message').text('Your vote is counted.')
@@ -65,7 +66,25 @@ const onMySurveySuccess = (response) => {
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
-  console.log(response)
+  const mySurveyHTML = mySurveysTemplate({surveys: response.surveys})
+  $('#all-surveys-container').addClass('d-none')
+  $('#all-surveys-container').html('')
+  $('#my-surveys-container').removeClass('d-none')
+  $('#my-surveys-container').html(mySurveyHTML)
+}
+
+const onSurveyIndexSuccess = (response) => {
+  const surveyHTML = surveyIndexTemplate({surveys: response.surveys})
+  $('#my-surveys-container').addClass('d-none')
+  $('#my-surveys-container').html('')
+  $('#all-surveys-container').removeClass('d-none')
+  $('#all-surveys-container').html(surveyHTML)
+}
+
+const onSurveyIndexFailure = (response) => {
+  $('#message').text('Ooops, something went wrong')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
 }
 
 const onMySurveyFailure = (response) => {
@@ -114,5 +133,7 @@ module.exports = {
   onMySurveyDeleteSuccess,
   onMySurveyDeleteFailure,
   onSurveyCreateSuccess,
-  onSurveyCreateFailure
+  onSurveyCreateFailure,
+  onSurveyIndexFailure,
+  onSurveyIndexSuccess
 }

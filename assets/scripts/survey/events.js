@@ -14,6 +14,13 @@ const onSurveySubmit = (event) => {
     .catch(surveyUi.onVoteFailure)
 }
 
+const onAllSurveys = () => {
+  event.preventDefault()
+  surveyApi.surveyIndex()
+    .then(surveyUi.onSurveyIndexSuccess)
+    .catch(surveyUi.onSurveyIndexFailure)
+}
+
 const onMySurveySubmit = (event) => {
   event.preventDefault()
   surveyApi.mySurveyIndex()
@@ -56,5 +63,6 @@ module.exports = {
   onMySurveyEdit,
   onMySurveyDelete,
   onCalcResults,
-  onCreateSurvey
+  onCreateSurvey,
+  onAllSurveys
 }
