@@ -45,20 +45,11 @@ const changePassword = function (data) {
   })
 }
 
-const mySurveyIndex = () => {
-  return $.ajax({
-    url: config.apiUrl + `/surveys?user=${store.user.id}`,
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
+
 
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword,
-  mySurveyIndex
+  changePassword
 }
