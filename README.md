@@ -1,5 +1,5 @@
-# App Title/About app(Survey Name to be Determined) "Survey Smurvey"
-### (possible name)
+# "Ask Nicely"
+"Ask Nicely" is a web application that allows a user to create a survey. They can create 4 response options for that one survey.  Other users can then log in, and vote on that survey.  The app records how many votes each option has, and can be displayed for all users to see.  Users can view all surveys that have been created, and vote on them. A user can also update and delete there own survey, but not others.
 
 ## Technologies Used
 JavaScript, MongoDB, Handlebars, jQuery, Express, HTML, CSS, Bootstrap, Postman, Mongoose, Heroku, GitHub
@@ -22,10 +22,10 @@ As a User signed in, I can view all surveys created by other users and me
 As a User signed in, I can participate in a all surveys by other users and me
 
 ## Links
--   [Frontend-Repo](link)
--   [Backend-Repo]('insertLinkHere')
--   [Deployed-Frontend](github)
--   [Deployed-Backend](heroku)
+-   [Frontend-Repo](https://github.com/ga-team-5/survey-client)
+-   [Backend-Repo](https://github.com/ga-team-5/survey-api)
+-   [Deployed-Frontend](https://ga-team-5.github.io/survey-client/)
+-   [Deployed-Backend](https://fast-woodland-73230.herokuapp.com/)
 
 ## Planning
 During our planning process, we as a Team started with reviewing the Project requirements our team was tasked to complete.
@@ -43,8 +43,23 @@ Every morning we made a list of what should be done that day. Each person on the
 
 Every feature we created had its own branch.  After every feature was created, tested, and reviewed by all members of the team, we pushed, merged and then would all pull under the development branch.
 
+If we had any problems with our code, we utilized websites such as stackoverflow, w3schools, and framework docs to try and solve the problem.  If we could not fix the problem, we then opened an issue in the issue que.
+
+## Plans for Future Improvements
+Update surveys in real time
+Generate random url for each survey
+Implement graph percentages for the vote results
+
+
+
 ## Wire Frames
 
-![](<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>)
+<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>
 
-![](<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>)
+<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>
+
+## Development Team
+-   [Griffin Hood](https://github.com/ghood97)
+-   [Harjinder Saini](https://github.com/khalsaniwas)
+-   [Dasha Khobotova](https://github.com/dashakho)
+-   [Jason Beharry](https://github.com/behappy23)
