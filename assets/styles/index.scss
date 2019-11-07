@@ -1,1 +1,72 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+body {
+  background-image: url("https://cstocapwoz-flywheel.netdna-ssl.com/wp-content/uploads/2019/Blog_Images/image-1200x627.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-size: 100% 100%;
+}
+
+  h1 {
+
+    font-family: 'Courgette', cursive;
+    font-size: 3em;
+    letter-spacing: 1.2rem;
+    padding: 4vh;
+    text-align: center;
+    color: black;
+  }
+
+  .input-box {
+    border-radius: 20px;
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+  }
+
+  .sign-up {
+    width: 300px;
+    // box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+  }
+
+  .sign-in {
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+  }
+
+  .auth-hide {
+    display: none;
+  }
+
+  .navbar {
+    background-color: #A9A9A9;
+  }
+
+  .survey-div {
+    border: 2px solid black;
+  }
+
+  .alert {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .all-surveys-container div {
+   background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v384-ning-03-gradientbg_2.jpg?auto=format&bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1800&s=415eb571a2a9c927afe427571295aa47")
+  }
+
+  .op-display {
+    display: inline;
+  }
+
+
+
+

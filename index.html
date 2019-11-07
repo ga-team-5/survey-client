@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>AskNicely</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,151 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>ASK NICELY</h1>
+
+<!-- <div class="my-account d-none">
+      <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle btn-block" type="button"
+      id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      My Account </button>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button id="change-password" class="dropdown-item submit" type="button"
+      data-toggle="modal" data-target="#passwordModalCenter">Change Password</button>
+      <button type="button" class="dropdown-item" id="sign-out-button">Sign Out</button>
+      </div>
+      </div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light d-none">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="nav-link all-surveys">All Surveys</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link my-survey">My Surveys</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link create-btn" data-toggle='modal' data-target='#createModal'>Create Survey</button>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         My Account
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <button id="change-password-btn" class="dropdown-item" data-toggle='modal' data-target='#change-pw-modal'>Change Passord</button>
+          <button id="sign-out-btn" class="dropdown-item">Sign-out</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="message" class="alert" role="alert">
+  </div>
+</nav>
+
+<div id="message2" class="alert" role="alert"> </div>
+
+<div class="login-div container-fluid">
+  <div class="row d-flex">
+      <div class="sign-up col-6">  <h2>Sign-up</h2>
+          <form id="sign-up">
+          <input type="email" class="input-box col-6" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+          <input type="password" class="input-box col-6" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+          <input type="password" class="input-box col-6" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
+         <br />
+          <button class="signUpButton">Sign up</button>
+          </form>
+      </div>
+
+      <div class="sign-in col-6"> <h2>Sign-in</h2>
+          <form id='sign-in'>
+          <input type="email" class="input-box col-6" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+          <input type="password" class="input-box col-6" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+          <br />
+          <button>Sign in</button>
+          </form>
+      </div>
+      </div>
+    </div>
+
+<!-- ------------------------Create Survey Modal------------------------------- -->
+<div class="modal" id='createModal' tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Survey</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Enter a Title and Four Options.</p>
+        <form id='createModalForm'>
+          <div class='form-group'>
+            <label for='create-form-title'>Title:</label>
+            <input required type="text" id='create-form-title' name='survey[title]' class='form-control col-6' placeholder='Survey-title'>
+          </div>
+
+          <div class='form-group'>
+            <label for='create-form-option1'>Option 1</label>
+            <input required type="text" id='create-form-option1'  name='survey[choices][option1]' class='form-control col-6' placeholder='option1'>
+          </div>
+
+          <div class='form-group'>
+            <label for='create-form-option2'>Option 2</label>
+            <input required type="text" id='create-form-option2'  name='survey[choices][option2]' class='form-control col-6' placeholder='option2'>
+          </div>
+
+          <div class='form-group'>
+            <label for='create-form-option3'>Option 3</label>
+            <input required type="text" id='create-form-option3'  name='survey[choices][option3]' class='form-control col-6' placeholder='option3'>
+          </div>
+
+          <div class='form-group'>
+            <label for='create-form-option4'>Option 4</label>
+            <input required type="text" id='create-form-option4'  name='survey[choices][option4]' class='form-control col-6' placeholder='option4'>
+          </div>
+          <button class="btn btn-primary">Create Survey</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -----------------------------Change PW Modal------------------------- -->
+<div class="modal" id='change-pw-modal' tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Enter A New Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id='change-pw-form'>
+          <div class='form-group'>
+            <label for='old-pw'>Old Password:</label>
+            <input required type="text" id='old-pw' name='passwords[old]' class='form-control col-6' placeholder='Old Password'>
+          </div>
+
+          <div class='form-group'>
+            <label for='new-pw'>New Password:</label>
+            <input required type="text" id='new-pw'  name='passwords[new]' class='form-control col-6' placeholder='New Password'>
+          </div>
+          <button class="btn btn-primary">Change Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="all-surveys-container" class="all-surveys-container container-fluid d-none d-flex flex-row flex-wrap">
+</div>
+
+
+<div id="my-surveys-container" class="my-surveys-container container-fluid d-none d-flex flex-row flex-wrap">
+</div>
+
     </body>
 </html>

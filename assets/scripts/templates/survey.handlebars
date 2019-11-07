@@ -1,0 +1,30 @@
+
+{{#each surveys as |survey|}}
+
+
+<div class="col-5 mx-auto survey-div">
+  <div class="row d-flex justify-content-end results-btn-div">
+    <button class="btn btn-primary results-btn" type="button" data-survey-id={{survey._id}}>Results</button>
+  </div>
+  <form class="survey-form" data-survey-id={{survey._id}}>
+    <h2 class="font-weight-bold">{{survey.title}}</h2>
+    <hr />
+    <div class="option1 row">
+      <h4 class="font-weight-bold"><input class="survey-radio1 mx-2" type="radio" name="vote" value="1">{{survey.choices.option1}}<p class="op1-display op-display ml-4 font-weight-normal"></p></h4>
+    </div>
+    <div class="option2 row">
+      <h4 class="font-weight-bold"><input class="survey-radio2 mx-2" type="radio" name="vote" value="2">{{survey.choices.option2}}<p class="op2-display op-display ml-4 font-weight-normal"></p></h4>
+    </div>
+    <div class="option3 row">
+      <h4 class="font-weight-bold"><input class="survey-radio3 mx-2" type="radio" name="vote" value="3">{{survey.choices.option3}}<p class="op3-display op-display ml-4 font-weight-normal"></p></h4>
+    </div>
+    <div class="option4 row">
+      <h4 class="font-weight-bold"><input class="survey-radio4 mx-2" type="radio" name="vote" value="4">{{survey.choices.option4}}<p class="op4-display op-display ml-4 font-weight-normal"></p></h4>
+    </div>
+    <div class="survey-buttons mt-3">
+      <button type="submit" class="btn btn-success vote-submit mr-auto">Submit</button>
+    </div>
+  </form>
+</div>
+
+{{/each}}
