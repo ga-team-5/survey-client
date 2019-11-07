@@ -2,40 +2,43 @@
 {{#each surveys as |survey|}}
 
 
-
 <div class="col-5 mx-auto">
-  
+<form id="survey-update-form" data-survey-id='{{survey._id}}'>
   <h4>Title</h4>
-  <input type="text" required value="{{survey.title}}">
-  
+  <input type="text" name="survey[title]" required value="{{survey.title}}">
+
   <div>
     <p>Option1</p>
-    <input type="text" required value="{{survey.choices.option1}}">
+    <input type="text" name="survey[choices][option1]" required value="{{survey.choices.option1}}">
   </div>
-  
+
   <div>
     <p>Option2</p>
-    <input type="text" required value="{{survey.choices.option2}}">
+    <input type="text" name="survey[choices][option2]"required value="{{survey.choices.option2}}">
   </div>
-  
+
   <div>
     <p>Option3</p>
-    <input type="text" required value="{{survey.choices.option3}}">
+    <input type="text" name="survey[choices][option3]" required value="{{survey.choices.option3}}">
   </div>
-  
+
   <div>
     <p>Option4</p>
-    <input type="text" required value="{{survey.choices.option4}}">
+    <input type="text" name="survey[choices][option4]" required value="{{survey.choices.option4}}">
   </div>
+
+  <div class="edit-btn-div">
+    <button type="submit" class="btn btn-info edit-survey-button">Edit</button>
+  </div>
+  <div class="delete-btn-div">
+    <button class="delete-survey-button btn btn-info" data-survey-id='{{survey._id}}' type="button">Delete</button>
+  </div>
+
+</form>
 
 </div>
 
 
-<button type="button" class="btn btn-info edit-survey-button" data-toggle="modal" data-target="#modal-{{survey._id}}" data-owner="{{survey.owner}}">
-Edit
-</button>
-
-<button class="delete-survey-button btn btn-info delete-survey-button" type="button" data-owner="{{survey.owner}}">Delete</button></p>
 
 
 

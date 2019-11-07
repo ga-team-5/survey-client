@@ -71,11 +71,34 @@ const surveyCreate = (data) => {
   })
 }
 
+const mySurveyEdit = (surveyId, data) => {
+  return $.ajax({
+    url: config.apiUrl + `/surveys/${surveyId}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
+const mySurveyDelete = (surveyId) => {
+  return $.ajax({
+    url: config.apiUrl + `/surveys/${surveyId}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   surveyIndex,
   createSurvey,
   voteCreate,
   voteIndex,
   surveyCreate,
-  mySurveyIndex
+  mySurveyIndex,
+  mySurveyEdit,
+  mySurveyDelete
 }
