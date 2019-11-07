@@ -13,6 +13,15 @@ const onSurveySubmit = (event) => {
     .catch(surveyUi.onVoteFailure)
 }
 
+const onCalcResults = (event) => {
+  event.preventDefault()
+  const surveyId = $(event.target).data('survey-id')
+  surveyApi.voteIndex(surveyId)
+    .then(surveyUi.onVoteIndexSuccess)
+    .catch(surveyUi.onVoteIndexFailure)
+}
+
 module.exports = {
-  onSurveySubmit
+  onSurveySubmit,
+  onCalcResults
 }

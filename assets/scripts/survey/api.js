@@ -83,6 +83,16 @@ const voteCreate = (optionId, surveyId) => {
   })
 }
 
+const voteIndex = (surveyId) => {
+  return $.ajax({
+    url: config.apiUrl + `/votes?survey=${surveyId}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   surveyIndex,
   createSurvey,
@@ -90,5 +100,6 @@ module.exports = {
   takeSurveys,
   deleteSurvey,
   getSurveyStats,
-  voteCreate
+  voteCreate,
+  voteIndex
 }
