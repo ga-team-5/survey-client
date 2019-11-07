@@ -4,7 +4,7 @@ const surveyIndexTemplate = require('../templates/survey.handlebars')
 const onVoteSuccess = (response) => {
   $('#message').text('Your vote is counted.')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
   $('#message').addClass('alert')
   console.log(response)
 }
@@ -12,7 +12,7 @@ const onVoteSuccess = (response) => {
 const onVoteFailure = (response) => {
   $('#message').text('You can only vote once.')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
 
   console.log(response)
 }
@@ -89,19 +89,19 @@ const onSurveyIndexSuccess = (response) => {
 const onSurveyIndexFailure = (response) => {
   $('#message').text('Ooops, something went wrong')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
 }
 
 const onMySurveyFailure = (response) => {
   $('#message').text('Ooops, something went wrong')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
 }
 
 const onMySurveyEditSuccess = (response) => {
   $('#message').text('Great! You successfully added your survey')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
   $('#message').addClass('alert')
   $('.my-survey').trigger('click')
   console.log(response)
@@ -110,13 +110,13 @@ const onMySurveyEditSuccess = (response) => {
 const onMySurveyEditFailure = (response) => {
   $('#message').text('Try again')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
 }
 
 const onMySurveyDeleteSuccess = (response) => {
   $('#message').text('You successfully deleted your survey')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
   $('#message').addClass('alert')
   console.log("hello")
   $('.my-survey').trigger('click')
@@ -126,7 +126,7 @@ const onMySurveyDeleteSuccess = (response) => {
 const onMySurveyDeleteFailure = (response) => {
   $('#message').text('Ooops! Try again')
   $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').animate({ opacity: 0 }, 8000)
 }
 
 module.exports = {
