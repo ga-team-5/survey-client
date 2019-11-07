@@ -50,6 +50,16 @@ const onVoteIndexFailure = (response) => {
   console.log(response)
 }
 
+const onSurveyCreateSuccess = (response) => {
+  console.log(response)
+  $('#createModalForm').trigger('reset')
+  $('#createModal').modal('toggle')
+}
+
+const onSurveyCreateFailure = (response) => {
+  console.log(response)
+}
+
 const onMySurveySuccess = (response) => {
   $('#message').text('Here we go!')
   $('#message').css({ opacity: 1 })
@@ -102,5 +112,7 @@ module.exports = {
   onMySurveyEditSuccess,
   onMySurveyEditFailure,
   onMySurveyDeleteSuccess,
-  onMySurveyDeleteFailure
+  onMySurveyDeleteFailure,
+  onSurveyCreateSuccess,
+  onSurveyCreateFailure
 }
