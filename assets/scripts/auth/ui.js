@@ -23,6 +23,7 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $("#message").animate({ opacity: 0 }, 5000)
   $('.sign-up').hide()
   $('.sign-in').hide()
   $('.navbar').removeClass('d-none')
@@ -50,6 +51,7 @@ const signOutSuccess = function () {
   $('#all-surveys-container').addClass('d-none')
   $('#all-surveys-container').html('')
   $('.navbar').addClass('d-none')
+  $('#message').css({ opacity: 1 })
   console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
 }
