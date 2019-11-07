@@ -20,6 +20,21 @@ const onMySurveySubmit = (event) => {
     .catch(surveyUi.onMySurveyFailure)
 }
 
+const onMySurveyEdit = (event) => {
+  event.preventDefault()
+  surveyApi.mySurveyIndex()
+    .then(surveyUi.onMySurveyEditSuccess)
+    .catch(surveyUi.onMySurveyEditFailure)
+}
+
+
+const onMySurveyDelete = (event) => {
+  event.preventDefault()
+  surveyApi.mySurveyIndex()
+    .then(surveyUi.onMySurveyDeleteSuccess)
+    .catch(surveyUi.onMySurveyDeleteyFailure)
+}
+
 const onCalcResults = (event) => {
   event.preventDefault()
   const surveyId = $(event.target).data('survey-id')
@@ -31,5 +46,7 @@ const onCalcResults = (event) => {
 module.exports = {
   onSurveySubmit,
   onMySurveySubmit,
+  onMySurveyEdit,
+  onMySurveyDelete,
   onCalcResults
 }

@@ -35,9 +35,10 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
-  $('#message').removeClass()
-  $('#message').addClass('alert')
+  $('#message2').text('Error on sign in')
+  $('#message2').addClass('alert')
+  $('#message2').css({ opacity: 1 })
+  $('#message2').animate({ opacity: 0 }, 5000)
   console.error('signInFailure ran. Error is :', error)
 }
 

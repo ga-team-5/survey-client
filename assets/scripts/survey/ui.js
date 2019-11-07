@@ -64,11 +64,43 @@ const onMySurveyFailure = (response) => {
   $('#message').animate({ opacity: 0 }, 5000)
 }
 
+const onMySurveyEditSuccess = (response) => {
+  $('#message').text('Great! You successfully added your survey')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').addClass('alert')
+  console.log(response)
+}
+
+const onMySurveyEditFailure = (response) => {
+  $('#message').text('Try again')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+}
+
+const onMySurveyDeleteSuccess = (response) => {
+  $('#message').text('You successfully deleted your survey')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').addClass('alert')
+  console.log(response)
+}
+
+const onMySurveyDeleteFailure = (response) => {
+  $('#message').text('Ooops! Try again')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+}
+
 module.exports = {
   onVoteSuccess,
   onVoteFailure,
   onVoteIndexSuccess,
   onVoteIndexFailure,
   onMySurveySuccess,
-  onMySurveyFailure
+  onMySurveyFailure,
+  onMySurveyEditSuccess,
+  onMySurveyEditFailure,
+  onMySurveyDeleteSuccess,
+  onMySurveyDeleteFailure
 }
