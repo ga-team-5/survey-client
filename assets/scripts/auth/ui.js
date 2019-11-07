@@ -23,7 +23,7 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('alert')
-  $('#message').animate({ opacity: 0 }, 8000)
+  $('#message').animate({ right: '350px',opacity: 0.2 }, 8000)
   $('.sign-up').hide()
   $('.sign-in').hide()
   $('.navbar').removeClass('d-none')
