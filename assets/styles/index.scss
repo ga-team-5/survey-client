@@ -57,6 +57,7 @@ body {
   .alert {
     margin: 0px;
     padding: 0px;
+    font-size: 30px;
   }
 
   .all-surveys-container div {
@@ -65,6 +66,10 @@ body {
 
   .op-display {
     display: inline;
+  }
+
+  #message2 {
+    text-align: center;
   }
 
 
