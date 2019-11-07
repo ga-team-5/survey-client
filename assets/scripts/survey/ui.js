@@ -12,6 +12,7 @@ const onVoteFailure = (response) => {
   $('#message').text('You can only vote once.')
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').addClass('alert')
 
 }
 
@@ -43,6 +44,10 @@ const onVoteIndexSuccess = (response) => {
 }
 
 const onVoteIndexFailure = (response) => {
+  $('#message').text('Failure')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').addClass('alert')
 }
 
 const onSurveyCreateSuccess = (response) => {
@@ -56,13 +61,13 @@ const onSurveyCreateSuccess = (response) => {
 }
 
 const onSurveyCreateFailure = (response) => {
+  $('#message').text('Failure')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+  $('#message').addClass('alert')
 }
 
 const onMySurveySuccess = (response) => {
-  $('#message').text('My surveys!')
-  $('#message').css({ opacity: 1 })
-  $('#message').animate({ opacity: 0 }, 7000)
-  $('#message').addClass('alert')
   const mySurveyHTML = mySurveysTemplate({surveys: response.surveys})
   $('#all-surveys-container').addClass('d-none')
   $('#all-surveys-container').html('')
@@ -91,7 +96,7 @@ const onMySurveyFailure = (response) => {
 }
 
 const onMySurveyEditSuccess = (response) => {
-  $('#message').text('Great! You successfully added your survey')
+  $('#message').text('Great! You successfully edited your survey')
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
@@ -100,6 +105,7 @@ const onMySurveyEditSuccess = (response) => {
 
 const onMySurveyEditFailure = (response) => {
   $('#message').text('Try again')
+  $('#message').addClass('alert')
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
 }

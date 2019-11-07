@@ -30,6 +30,8 @@ const signInSuccess = function (data) {
   $('.sign-up').hide()
   $('.sign-in').hide()
   $('.navbar').removeClass('d-none')
+  $('#sign-in').trigger('reset')
+  $('#message2').text('')
 
   const surveyHTML = surveyIndexTemplate({surveys: data.surveys})
   $('#all-surveys-container').removeClass('d-none')
@@ -41,6 +43,7 @@ const signInFailure = function (error) {
   $('#message2').addClass('alert')
   $('#message2').css({ opacity: 1 })
   $('#message2').animate({ opacity: 0 }, 5000)
+  $('#sign-in').trigger('reset')
 }
 
 const signOutSuccess = function () {
@@ -60,18 +63,28 @@ const signOutFailure = function (error) {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#message2').css({ opacity: 1 })
+  $('#message2').animate({ opacity: 0 }, 5000)
 }
 
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+  $('#change-pw-form').trigger('reset')
+  $('#change-pw-modal').modal('toggle')
 }
 
 const changePasswordFailure = function (error) {
   $('#message').text('Error on change password')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
+  $('#change-pw-form').trigger('reset')
+  $('#change-pw-modal').modal('toggle')
 }
 
 module.exports = {
