@@ -53,10 +53,6 @@ const voteIndex = (surveyId) => {
 module.exports = {
   surveyIndex,
   createSurvey,
-  updateSurvey,
-  takeSurveys,
-  deleteSurvey,
-  getSurveyStats,
   voteCreate,
   voteIndex
 }
