@@ -18,5 +18,4 @@ $(() => {
   $('.my-survey').on('click', surveyEvents.onMySurveySubmit)
   $('.edit-survey-button').on('click', surveyEvents.onMySurveyEdit)
   $('.delete-survey-button').on('click', surveyEvents.onMySurveyDelete)
-  $('#createModalForm').on('submit', surveyEvents.onCreateSurvey)
 })
