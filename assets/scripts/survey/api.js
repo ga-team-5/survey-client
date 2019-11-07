@@ -15,7 +15,7 @@ const surveyIndex = () => {
 
 const mySurveyIndex = () => {
   return $.ajax({
-    url: config.apiUrl + `/surveys?user=${store.user.id}`,
+    url: config.apiUrl + `/surveys?user=${store.user._id}`,
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -68,16 +68,6 @@ const surveyCreate = (data) => {
       Authorization: 'Bearer ' + store.user.token
     },
     data: data
-  })
-}
-
-const mySurveyIndex = () => {
-  return $.ajax({
-    url: config.apiUrl + `/surveys?user=${store.user.id}`,
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
   })
 }
 
