@@ -13,6 +13,13 @@ const onSurveySubmit = (event) => {
     .catch(surveyUi.onVoteFailure)
 }
 
+const onMySurveySubmit = (event) => {
+  event.preventDefault()
+  surveyApi.mySurveyIndex()
+    .then(surveyUi.onMySurveySuccess)
+    .catch(surveyUi.onMySurveyFailure)
+}
+
 const onCalcResults = (event) => {
   event.preventDefault()
   const surveyId = $(event.target).data('survey-id')
@@ -23,5 +30,6 @@ const onCalcResults = (event) => {
 
 module.exports = {
   onSurveySubmit,
+  onMySurveySubmit,
   onCalcResults
 }
