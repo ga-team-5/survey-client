@@ -5,7 +5,7 @@ body {
   background-image: url("https://cstocapwoz-flywheel.netdna-ssl.com/wp-content/uploads/2019/Blog_Images/image-1200x627.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  // background-position: center;
   // background-size: 100% 100%;
 }
 
@@ -51,7 +51,7 @@ body {
   }
 
   .survey-div {
-    border: 2px solid black;
+    border: 2px solid lightgrey;
   }
 
   .alert {
@@ -72,6 +72,6 @@ body {
     text-align: center;
   }
 
-
-
-
+  #survey-update-form {
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v384-ning-05b-gradientbg_2.jpg?auto=format&bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1800&s=7d0000ea2293d8ebccbac2a0bf7d0040")
+   }
