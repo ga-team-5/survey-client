@@ -54,12 +54,12 @@ Implement graph percentages for the vote results
 
 ## Wire Frames
 
-(<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>)
+<a href="https://imgur.com/4Z6HsKH"><img src="https://i.imgur.com/4Z6HsKH.png" title="source: imgur.com" /></a>
 
-(<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>)
+<a href="https://imgur.com/xImASxg"><img src="https://i.imgur.com/xImASxg.png" title="source: imgur.com" /></a>
 
 ## Development Team
-[Griffin Hood](https://github.com/ghood97)
-[Harjinder Saini](https://github.com/khalsaniwas)
-[Dasha Khobotova](https://github.com/dashakho)
-[Jason Beharry](https://github.com/behappy23)
+-   [Griffin Hood](https://github.com/ghood97)
+-   [Harjinder Saini](https://github.com/khalsaniwas)
+-   [Dasha Khobotova](https://github.com/dashakho)
+-   [Jason Beharry](https://github.com/behappy23)
