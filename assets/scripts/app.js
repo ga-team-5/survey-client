@@ -18,7 +18,7 @@ $(() => {
   $('#createModalForm').on('submit', surveyEvents.onCreateSurvey)
   $('.my-survey').on('click', surveyEvents.onMySurveySubmit)
   $('.my-surveys-container').on('submit', 'form', surveyEvents.onMySurveyEdit)
-
+  $('#change-pw-form').on('submit', authEvents.onChangePassword)
   $('.my-surveys-container').on('click', '.delete-btn-div button', surveyEvents.onMySurveyDelete)
   $('.all-surveys').on('click', surveyEvents.onAllSurveys)
 })
