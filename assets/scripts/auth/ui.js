@@ -6,32 +6,36 @@ const store = require('../store')
 const surveyIndexTemplate = require('../templates/survey.handlebars')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Signed up successfully')
-  $('#message').removeClass()
-  $('#message').addClass('alert')
-  console.log('signUpSuccess ran. Data is :', data)
+  $('#message2').text('Signed up successfully')
+  $('#message2').css({ opacity: 1 })
+  $('#message2').addClass('alert')
+  $('#message2').animate({ opacity: 0 }, 5000)
+  $('#sign-up').trigger('reset')
 }
 
 const signUpFailure = function (error) {
-  $('#message').text('Error on sign up')
-  $('#message').removeClass()
-  $('#message').addClass('alert')
-  console.error('signUpFailure ran. Error is :', error)
+  $('#message2').text('Error on sign up')
+  $('#message2').addClass('alert')
+  $('#message2').css({ opacity: 1 })
+  $('#message2').animate({ opacity: 0 }, 5000)
+  $('#sign-up').trigger('reset')
 }
 
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('.sign-up').hide()
   $('.sign-in').hide()
   $('.navbar').removeClass('d-none')
+  $('#sign-in').trigger('reset')
+  $('#message2').text('')
 
   const surveyHTML = surveyIndexTemplate({surveys: data.surveys})
   $('#all-surveys-container').removeClass('d-none')
   $('#all-surveys-container').html(surveyHTML)
-  console.log('signInSuccess ran. Data is :', data)
 }
 
 const signInFailure = function (error) {
@@ -39,13 +43,12 @@ const signInFailure = function (error) {
   $('#message2').addClass('alert')
   $('#message2').css({ opacity: 1 })
   $('#message2').animate({ opacity: 0 }, 5000)
-  console.error('signInFailure ran. Error is :', error)
+  $('#sign-in').trigger('reset')
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
-  $('#message').removeClass()
-  $('#message').addClass('alert')
+  $('#message2').text('Signed out successfully')
+  $('#message2').addClass('alert')
   $('form').trigger('reset')
   $('.sign-up').show()
   $('.sign-in').show()
@@ -53,7 +56,6 @@ const signOutSuccess = function () {
   $('#all-surveys-container').html('')
   $('.navbar').addClass('d-none')
   $('#message').css({ opacity: 1 })
-  console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
 }
 
@@ -61,22 +63,26 @@ const signOutFailure = function (error) {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
   $('#message').addClass('alert')
-  console.error('signOutFailure ran. Error is :', error)
+  $('#message2').css({ opacity: 1 })
+  $('#message2').animate({ opacity: 0 }, 5000)
 }
 
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
   $('#change-pw-form').trigger('reset')
   $('#change-pw-modal').modal('toggle')
-  console.log('changePasswordSuccess ran and nothing was returned!')
 }
 
-const changePasswordFailure = function (response) {
+const changePasswordFailure = function (error) {
   $('#message').text('Error on change password')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#message').css({ opacity: 1 })
+  $('#message').animate({ opacity: 0 }, 5000)
   $('#change-pw-form').trigger('reset')
   $('#change-pw-modal').modal('toggle')
 }

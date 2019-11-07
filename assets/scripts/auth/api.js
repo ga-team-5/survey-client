@@ -33,7 +33,6 @@ const signOut = function () {
 }
 
 const changePassword = function (data) {
-  console.log('data is ', data)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
