@@ -37,6 +37,9 @@
       <li class="nav-item">
         <button class="nav-link">My Surveys</button>
       </li>
+      <li class="nav-item">
+        <button class="nav-link create-btn" data-toggle='modal' data-target='#createModal'>Create Survey</button>
+      </li>
       <li class="nav-item dropdown">
         <button class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          My Account
@@ -76,25 +79,54 @@
     </div>
 
 
-<div class="create-survey d-none">
+<div class="modal" id='createModal' tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Survey</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Enter a Title and Four Options.</p>
+        <form id='createModalForm'>
+          <div class='form-group'>
+            <label for='create-form-title'>Title:</label>
+            <input required type="text" id='create-form-title' name='survey[title]' class='form-control col-6' placeholder='Survey-title'>
+          </div>
 
-      <div id="create-survey" class='col-6 mt-5'>
-        <form id="create-survey-form">
-          <h2>Create My Survey</h2>
-          <h5 id="create-survey-message"></h5>
-          <p>
-          <input type="text" name="survey[title]" placeholder="Put Your Question" class="form-control">
+          <div class='form-group'>
+            <label for='create-form-option1'>Option 1</label>
+            <input required type="text" id='create-form-option1'  name='survey[choices][option1]' class='form-control col-6' placeholder='option1'>
+          </div>
 
-          <input type="text" name="survey[option1]"class="form-control mt-2" placeholder="Option #1" required>
-          <input type="text" name="survey[option2]" class="form-control mt-2" placeholder="Option #2" required>
-          <input type="text" name="survey[option3]" class="form-control mt-2" placeholder="Option #3" required>
-          <input type="text" name="survey[option4]" class="form-control mt-2" placeholder="Option #4" required>
+          <div class='form-group'>
+            <label for='create-form-option2'>Option 2</label>
+            <input required type="text" id='create-form-option2'  name='survey[choices][option2]' class='form-control col-6' placeholder='option2'>
+          </div>
 
-          </p>
-          <button type="submit" id="create-new-survey-button" class="btn btn-info submit">Create</button>
+          <div class='form-group'>
+            <label for='create-form-option3'>Option 3</label>
+            <input required type="text" id='create-form-option3'  name='survey[choices][option3]' class='form-control col-6' placeholder='option3'>
+          </div>
+
+          <div class='form-group'>
+            <label for='create-form-option4'>Option 4</label>
+            <input required type="text" id='create-form-option4'  name='survey[choices][option4]' class='form-control col-6' placeholder='option4'>
+          </div>
+
+
+
+
+
         </form>
       </div>
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Create Survey</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="all-surveys-container" class="all-surveys-container container-fluid d-none d-flex flex-row flex-wrap">

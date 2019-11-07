@@ -1,5 +1,6 @@
 const surveyApi = require('./api')
 const surveyUi = require('./ui')
+const getFormFields = require(`../../../lib/get-form-fields`)
 
 const onSurveySubmit = (event) => {
   event.preventDefault()
@@ -21,7 +22,15 @@ const onCalcResults = (event) => {
     .catch(surveyUi.onVoteIndexFailure)
 }
 
+const onCreateSurvey = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  surveyApi.surveyCreate(data)
+    .then(surveyUi.onSurveyCreateSuccess)
+    .catch(surveyUi.onSurveyCreateFailure)
+}
 module.exports = {
   onSurveySubmit,
-  onCalcResults
+  onCalcResults,
+  onCreateSurvey
 }
