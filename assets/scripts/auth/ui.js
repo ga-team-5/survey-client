@@ -68,14 +68,17 @@ const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
   $('#message').removeClass()
   $('#message').addClass('alert')
+  $('#change-pw-form').trigger('reset')
+  $('#change-pw-modal').modal('toggle')
   console.log('changePasswordSuccess ran and nothing was returned!')
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function (response) {
   $('#message').text('Error on change password')
   $('#message').removeClass()
   $('#message').addClass('alert')
-  console.error('changePasswordFailure ran. Error is :', error)
+  $('#change-pw-form').trigger('reset')
+  $('#change-pw-modal').modal('toggle')
 }
 
 module.exports = {
