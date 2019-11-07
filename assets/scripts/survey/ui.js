@@ -9,7 +9,17 @@ const onVoteFailure = (response) => {
   console.log(response)
 }
 
+const onVoteIndexSuccess = (response) => {
+  console.log(response)
+}
+
+const onVoteIndexFailure = (response) => {
+  console.log(response)
+}
+
 module.exports = {
   onVoteSuccess,
-  onVoteFailure
+  onVoteFailure,
+  onVoteIndexSuccess,
+  onVoteIndexFailure
 }

@@ -3,25 +3,27 @@
 
 
 <div class="col-5 mx-auto survey-div">
+  <div class="row d-flex justify-content-end results-btn-div">
+    <button class="btn btn-primary results-btn" type="button" data-survey-id={{survey._id}}>Results</button>
+  </div>
   <form class="survey-form" data-survey-id={{survey._id}}>
-    <h4>{{survey.title}}</h4>
-    <div>
-      <p>{{survey.choices.option1}}</p>
-      <input type="radio" name="vote" value="1">
+    <h2 class="font-weight-bold">{{survey.title}}</h2>
+    <hr />
+    <div class="option1 row">
+      <h4><input class="survey-radio mx-2" type="radio" name="vote" value="1">{{survey.choices.option1}}</h4>
     </div>
-    <div>
-      <p>{{survey.choices.option2}}</p>
-      <input type="radio" name="vote" value="2">
+    <div class="option2 row">
+      <h4><input class="survey-radio mx-2" type="radio" name="vote" value="2">{{survey.choices.option2}}</h4>
     </div>
-    <div>
-      <p>{{survey.choices.option3}}</p>
-      <input type="radio" name="vote" value="3">
+    <div class="option3 row">
+      <h4><input class="survey-radio mx-2" type="radio" name="vote" value="3">{{survey.choices.option3}}</h4>
     </div>
-    <div>
-      <p>{{survey.choices.option4}}</p>
-      <input type="radio" name="vote" value="4">
+    <div class="option4 row">
+      <h4><input class="survey-radio mx-2" type="radio" name="vote" value="4">{{survey.choices.option4}}</h4>
     </div>
-    <button type="submit" class="btn btn-info vote-submit">Submit</button>
+    <div class="survey-buttons mt-3">
+      <button type="submit" class="btn btn-success vote-submit mr-auto">Submit</button>
+    </div>
   </form>
 </div>
 
