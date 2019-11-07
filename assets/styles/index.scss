@@ -1,5 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
-
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
 body {
   background-image: url("https://cstocapwoz-flywheel.netdna-ssl.com/wp-content/uploads/2019/Blog_Images/image-1200x627.png");
@@ -9,9 +9,9 @@ body {
   // background-size: 100% 100%;
 }
 
-
-
   h1 {
+
+    font-family: 'Courgette', cursive;
     font-size: 3em;
     letter-spacing: 1.2rem;
     padding: 4vh;
@@ -66,5 +66,7 @@ body {
   .op-display {
     display: inline;
   }
+
+
 
 
