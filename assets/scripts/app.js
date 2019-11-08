@@ -21,4 +21,10 @@ $(() => {
   $('#change-pw-form').on('submit', authEvents.onChangePassword)
   $('.my-surveys-container').on('click', '.delete-btn-div button', surveyEvents.onMySurveyDelete)
   $('.all-surveys').on('click', surveyEvents.onAllSurveys)
+  $('#change-pw-modal').on('show.bs.modal', event => {
+    $('#change-pw-form').trigger('reset')
+  })
+  $('#createModal').on('show.bs.modal', event => {
+    $('#createModalForm').trigger('reset')
+  })
 })

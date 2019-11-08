@@ -64,6 +64,7 @@ const onSurveyCreateFailure = (response) => {
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
+  $('#createModalForm').trigger('reset')
 }
 
 const onMySurveySuccess = (response) => {
