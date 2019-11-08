@@ -13,7 +13,6 @@ const onVoteFailure = (response) => {
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
-
 }
 
 const onVoteIndexSuccess = (response) => {
@@ -54,7 +53,7 @@ const onSurveyCreateSuccess = (response) => {
   $('#createModalForm').trigger('reset')
   $('#createModal').modal('toggle')
   $('.my-survey').trigger('click')
-  $('#message').text('Survey created!')
+  $('#message').text('Survey created! Edit it or click "All Surveys"')
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 7000)
   $('#message').addClass('alert')
@@ -65,6 +64,7 @@ const onSurveyCreateFailure = (response) => {
   $('#message').css({ opacity: 1 })
   $('#message').animate({ opacity: 0 }, 5000)
   $('#message').addClass('alert')
+  $('#createModalForm').trigger('reset')
 }
 
 const onMySurveySuccess = (response) => {
