@@ -13,7 +13,7 @@ const signUpSuccess = function (data) {
   $('#sign-up').trigger('reset')
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = function (response) {
   $('#message2').text('Error on sign up')
   $('#message2').addClass('alert')
   $('#message2').css({ opacity: 1 })
@@ -38,7 +38,7 @@ const signInSuccess = function (data) {
   $('#all-surveys-container').html(surveyHTML)
 }
 
-const signInFailure = function (error) {
+const signInFailure = function (response) {
   $('#message2').text('Error on sign in')
   $('#message2').addClass('alert')
   $('#message2').css({ opacity: 1 })
@@ -54,12 +54,14 @@ const signOutSuccess = function () {
   $('.sign-in').show()
   $('#all-surveys-container').addClass('d-none')
   $('#all-surveys-container').html('')
+  $('#my-surveys-container').addClass('d-none')
+  $('#my-surveys-container').html('')
   $('.navbar').addClass('d-none')
   $('#message').css({ opacity: 1 })
   store.user = null
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function (response) {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
   $('#message').addClass('alert')
@@ -77,7 +79,7 @@ const changePasswordSuccess = function () {
   $('#change-pw-modal').modal('toggle')
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function (response) {
   $('#message').text('Error on change password')
   $('#message').removeClass()
   $('#message').addClass('alert')

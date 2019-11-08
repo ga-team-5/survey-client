@@ -2,42 +2,42 @@
 {{#each surveys as |survey|}}
 
 
-<div class="col-5 mx-auto my-2">
-<form id="survey-update-form" data-survey-id='{{survey._id}}'>
-  <h4>Title</h4>
-  <input type="text" name="survey[title]" required value="{{survey.title}}">
+<div class="container col-sm-12 col-lg-5 mx-auto my-2">
+  <form id="survey-update-form" data-survey-id='{{survey._id}}'>
+    <div class="p-5">
+      <h4>Title</h4>
+      <input class="col-10" type="text" name="survey[title]" required value="{{survey.title}}">
 
-  <div>
-    <p>Option1</p>
-    <input type="text" name="survey[choices][option1]" required value="{{survey.choices.option1}}">
-  </div>
+      <div>
+        <p>Option1</p>
+        <input class="col-7" type="text" name="survey[choices][option1]" required value="{{survey.choices.option1}}">
+      </div>
 
-  <div>
-    <p>Option2</p>
-    <input type="text" name="survey[choices][option2]"required value="{{survey.choices.option2}}">
-  </div>
+      <div>
+        <p>Option2</p>
+        <input class="col-7" type="text" name="survey[choices][option2]"required value="{{survey.choices.option2}}">
+      </div>
 
-  <div>
-    <p>Option3</p>
-    <input type="text" name="survey[choices][option3]" required value="{{survey.choices.option3}}">
-  </div>
+      <div>
+        <p>Option3</p>
+        <input class="col-7" type="text" name="survey[choices][option3]" required value="{{survey.choices.option3}}">
+      </div>
 
-  <div>
-    <p>Option4</p>
-    <input type="text" name="survey[choices][option4]" required value="{{survey.choices.option4}}">
-  </div>
+      <div>
+        <p>Option4</p>
+        <input class="col-7" type="text" name="survey[choices][option4]" required value="{{survey.choices.option4}}">
+      </div>
 
-<div class="btn-group mt-2">
-  <div class="edit-btn-div mr-2">
-    <button type="submit" class="btn btn-info edit-survey-button">Edit</button>
-  </div>
-  <div class="delete-btn-div">
-    <button class="delete-survey-button btn btn-info" data-survey-id='{{survey._id}}' type="button">Delete</button>
-  </div>
-</div>
-
-</form>
-
+      <div class="btn-group mt-2">
+        <div class="edit-btn-div mr-2">
+          <button type="submit" class="btn btn-info edit-survey-button">Edit</button>
+        </div>
+        <div class="delete-btn-div">
+          <button class="delete-survey-button btn btn-info" data-survey-id='{{survey._id}}' type="button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 
 
